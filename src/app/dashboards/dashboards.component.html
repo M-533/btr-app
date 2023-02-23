@@ -1,0 +1,150 @@
+<div class="page-container">
+  <app-sidebar></app-sidebar>
+  <div class="main-container">
+    <header>
+      <div class="monitored-stations">
+        <small></small>
+        <img src="assets/gas-station.png" />
+        <span>2 / 3</span>
+        <div>Monitored Stations</div>
+      </div>
+      <div class="monitored-stations">
+        <fa-icon [icon]="faMemory"></fa-icon>
+        <span>20s</span>
+        <div>last update</div>
+      </div>
+      <div class="navigate-btn">
+        <div>today</div>
+        <div>yesterday</div>
+        <div class="activebtn">lastWeek</div>
+      </div>
+      <div class="start-date">
+        <span> start date-time</span>
+        <fa-icon [icon]="dateIcon"></fa-icon>
+      </div>
+      <div class="start-date">
+        <span> start date-time</span>
+        <fa-icon [icon]="dateIcon"></fa-icon>
+      </div>
+    </header>
+    <div class="dashboard-container">
+      <div class="dashboard">
+        <div class="total-value">
+          <div class="total-number">71,082 <span>DQ</span></div>
+          <span class="total-name">total value</span>
+          <span class="increase">
+            <fa-icon [icon]="faSortUp"></fa-icon> 82%</span
+          >
+        </div>
+        <div class="total-value">
+          <div class="total-number">20,000 <span>ES</span></div>
+          <span class="total-name">total sales</span>
+          <span class="increase">
+            <fa-icon [icon]="faSortDown"></fa-icon> 14%</span
+          >
+        </div>
+        <div class="total-value">
+          <div class="total-number">31,082 <span>DQ</span></div>
+          <span class="total-name">total sales</span>
+          <span class="increase">
+            <fa-icon [icon]="faSortUp"></fa-icon> 11 j</span
+          >
+        </div>
+        <div class="total-value">
+          <div class="total-number">1567 <span>DQ</span></div>
+          <span class="total-name">Total Transaction Count</span>
+          <span class="increase">
+            <fa-icon [icon]="faSortDown"></fa-icon> 2%</span
+          >
+        </div>
+
+        <div class="sales-btns">
+          <div class="navigate-btn">
+            <div
+            >
+              <fa-icon [icon]="bars"></fa-icon>crash
+            </div>
+            <div
+              [ngClass]="{ activebtn: !showSales }"
+              (click)="showSales = false"
+            >
+              <fa-icon [icon]="lists"></fa-icon>lists
+            </div>
+          </div>
+        </div>
+        <div
+          class="sales-container"
+          [ngStyle]="{ background: !showSales ? '#F9F5F3' : '#FFFFFF' }"
+        >
+          <div class="lists-container" *ngIf="!showSales" >
+            <div class="list" *ngFor="let station of stations" [routerLink]="['/station/finance']"  >
+              <div class="head">
+                <div class="box-title">
+                  <small></small>
+                  <img src="assets/colored-station.png" width="34rem" /> Station
+                  Name Dummy
+                </div>
+                <div>
+                  <fa-icon  [icon]="threedots"></fa-icon>
+                </div>
+              </div>
+              <div class="states">
+                <div class="state">
+                  <span class="bold">Total Sales :</span>
+                  <span>Compression</span>
+                  <span class="bold">Compression State :</span>
+                  <span >62,721 m <sup>3</sup></span>
+                  <span class="bold">Max Transaction / hour :</span>
+                  <span>20.650000</span>
+                </div>
+                <div class="state">
+                  <span class="bold">Total value :</span>
+                  <span>Compression</span>
+                  <span class="bold">Total Transaction Count :</span>
+                  <span >62,721 m <sup>3</sup></span>
+                  <span class="bold">Transaction Date-Time :</span>
+                  <span>feb 10:33pm </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hourly-part">
+        <div class="chart-wrapper">
+          <app-chart1></app-chart1>
+        </div>
+        <div class="hourly-chart"></div>
+        <div class="sales-ranges">
+          <h5>Sales by Station</h5>
+          <div class="rang-container">
+            <div class="station">
+              <img src="assets/gas-station.png" />
+              <span>station name</span>
+              <div class="much">54,732l m <sup>3</sup></div>
+            </div>
+            <div class="range"></div>
+          </div>
+          <div class="rang-container">
+            <div class="station">
+              <img src="assets/gas-station.png" />
+              <span>station name</span>
+              <div class="much">79,732l m <sup>3</sup></div>
+            </div>
+            <div class="range s"></div>
+          </div>
+          <div class="rang-container l">
+            <div class="station">
+              <img src="assets/gas-station.png" />
+              <span>station name</span>
+              <div class="much">0000000</div>
+            </div>
+            <div class="range"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

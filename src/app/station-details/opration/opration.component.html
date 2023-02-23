@@ -1,0 +1,349 @@
+<div class="dashboard-container">
+  <div class="dashboard">
+    <div class="first-box">
+      <div class="head">
+        <div class="title">Station details</div>
+        <div class="box-nav">
+          <div
+            (click)="btnNav = 'tran'"
+            [ngClass]="{ 'active-nav': btnNav == 'tran' }"
+          >
+            <span>pressure</span>
+          </div>
+          <div
+            [ngClass]="{ 'active-nav': btnNav == 'kpi' }"
+            (click)="btnNav = 'kpi'"
+          >
+            <span>kPI </span>
+          </div>
+          <div
+            (click)="btnNav = 'compre'"
+            [ngClass]="{ 'active-nav': btnNav == 'compre' }"
+          >
+            <span>temperture</span>
+          </div>
+        </div>
+
+        <div class="icons-nav">
+          <div class="navigate-btn">
+            <div class="activebtn"><fa-icon [icon]="tran"></fa-icon></div>
+            <div><fa-icon [icon]="faSnowflake"></fa-icon></div>
+          </div>
+          <fa-icon [icon]="threedots"></fa-icon>
+        </div>
+      </div>
+      <div>
+        <div class="syrclers" *ngIf="btnNav == 'kpi'">
+          <div class="big-details">
+            <circle-progress
+              [percent]="82"
+              [radius]="35"
+              [innerStrokeWidth]="7"
+              [outerStrokeWidth]="7"
+              [space]="-6"
+              [unitsFontSize]="'10'"
+              [subtitleFontSize]="'7'"
+              [unitsColor]="'#3D5161'"
+              [titleColor]="'#3D5161'"
+              [titleFontSize]="'17'"
+              [showSubtitle]="false"
+              [titleColor]="'#3D5161'"
+              [showInnerStroke]="true"
+              [outerStrokeColor]="'#FF7F5C'"
+              [innerStrokeColor]="'#ff7f5c4f'"
+              [animationDuration]="800"
+            ></circle-progress>
+            <h4>CT / RT</h4>
+          </div>
+          <div class="big-details">
+            <h4>40294</h4>
+            <h4>total working time</h4>
+          </div>
+          <div class="big-details">
+            <h4>50984</h4>
+            <h4>total power on time</h4>
+          </div>
+        </div>
+        <div
+          class="oil-total-continer"
+          *ngIf="btnNav == 'tran' || btnNav == 'compre'"
+        >
+          <div class="oil-ranege">
+            <div class="ol-wrapper">
+              <div class="pro-range">
+                <circle-progress
+                  [percent]="100"
+                  [radius]="45"
+                  [innerStrokeWidth]="9"
+                  [renderOnClick]="false"
+                  [outerStrokeWidth]="9"
+                  [space]="-8"
+                  [unitsFontSize]="'10'"
+                  [subtitleFontSize]="'7'"
+                  [titleFontSize]="'17'"
+                  [showTitle]="false"
+                  [showUnits]="false"
+                  [showSubtitle]="false"
+                  [startFromZero]="false"
+                  [titleColor]="'#3D5161'"
+                  [showInnerStroke]="true"
+                  [outerStrokeColor]="'#FF7F5C'"
+                  [innerStrokeColor]="'#ff7f5c4f'"
+                  [animationDuration]="800"
+                  [animation]="false"
+                ></circle-progress>
+              </div>
+            </div>
+            <span class="progress">inlet oil</span>
+            <span>100 pa</span>
+          </div>
+          <div class="oil-ranege">
+            <div class="ol-wrapper">
+              <div class="pro-range">
+                <circle-progress
+                  [percent]="60"
+                  [renderOnClick]="false"
+                  [radius]="45"
+                  [innerStrokeWidth]="9"
+                  [outerStrokeWidth]="9"
+                  [space]="-8"
+                  [unitsFontSize]="'10'"
+                  [subtitleFontSize]="'7'"
+                  [titleFontSize]="'17'"
+                  [showTitle]="false"
+                  [showUnits]="false"
+                  [showSubtitle]="false"
+                  [startFromZero]="false"
+                  [showInnerStroke]="true"
+                  [outerStrokeColor]="'#FF7F5C'"
+                  [innerStrokeColor]="'#ff7f5c4f'"
+                  [animationDuration]="800"
+                  [animation]="false"
+                ></circle-progress>
+              </div>
+            </div>
+            <span class="progress">oil progress</span>
+            <span>100 pa</span>
+          </div>
+          <div class="oil-ranege">
+            <div class="ol-wrapper">
+              <div class="pro-range">
+                <circle-progress
+                  [percent]="100"
+                  [radius]="45"
+                  [renderOnClick]="false"
+                  [innerStrokeWidth]="9"
+                  [outerStrokeWidth]="9"
+                  [space]="-8"
+                  [unitsFontSize]="'10'"
+                  [subtitleFontSize]="'7'"
+                  [titleFontSize]="'17'"
+                  [showTitle]="false"
+                  [showUnits]="false"
+                  [showSubtitle]="false"
+                  [startFromZero]="false"
+                  [space]="0"
+                  [innerStrokeColor]="'#ff7f5c4f'"
+                  [outerStrokeColor]="'#FF7F5C'"
+                  [animationDuration]="800"
+                  [animation]="false"
+                ></circle-progress>
+              </div>
+            </div>
+            <span class="progress">oil stages</span>
+            <span>100 pa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="head">
+        <div class="title">Station details</div>
+        <div class="box-nav">
+          <div
+            (click)="btnNav2 = 'compre'"
+            [ngClass]="{ 'active-nav': btnNav2 == 'compre' }"
+          >
+            <span> Compressor state</span>
+          </div>
+
+          <div
+            (click)="btnNav2 = 'dispenser'"
+            [ngClass]="{ 'active-nav': btnNav2 == 'dispenser' }"
+          >
+            <span>dispenser details</span>
+          </div>
+        </div>
+
+        <div class="icons-nav">
+          <div class="navigate-btn">
+            <div
+              (click)="btnNav2 = 'compre'"
+              [ngClass]="{ activebtn: btnNav2 == 'compre' }"
+            >
+              <fa-icon [icon]="faChartBar"></fa-icon>
+            </div>
+            <div
+              (click)="btnNav2 = 'dispenser'"
+              [ngClass]="{ activebtn: btnNav2 == 'dispenser' }"
+            >
+              <fa-icon [icon]="faChartLine"></fa-icon>
+            </div>
+          </div>
+          <fa-icon [icon]="threedots"></fa-icon>
+        </div>
+      </div>
+
+      <div *ngIf="btnNav2 == 'compre'">
+        <div class="sales-chart">
+          <div class="line-wrapper">
+            <span>573</span>
+            <div class="line"></div>
+          </div>
+          <div class="line-wrapper">
+            <span>494</span>
+            <div class="line"></div>
+          </div>
+          <div class="line-wrapper">
+            <span>360</span>
+            <div class="line"></div>
+          </div>
+          <div class="line-wrapper">
+            <span>230</span>
+            <div class="line"></div>
+          </div>
+          <div class="line-wrapper">
+            <span>100</span>
+            <div class="line"></div>
+          </div>
+          <div class="line-wrapper">
+            <span></span>
+            <div class="line base-line">
+              <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="btnNav2 == 'dispenser'" class="dispenser-container">
+        <div class="dispensar" *ngFor="let dispenser of dispensers">
+          <span class="d-name">DISPENSER {{ dispenser }}</span>
+          <div class="range-temp-wrapper">
+            <div class="range-wrapper">
+              <div>
+                <span>temperture</span>
+                <div class="range t"></div>
+              </div>
+            </div>
+            <div class="degree">
+              100 <sub>c</sub>
+              <span>
+                <fa-icon [icon]="faSortDown"> </fa-icon>
+                20 c
+              </span>
+            </div>
+          </div>
+          <div class="range-temp-wrapper">
+            <div class="range-wrapper">
+              <div>
+                <span>pressure</span>
+                <div class="range p"></div>
+              </div>
+            </div>
+            <div class="degree">
+              001 <sub>c</sub>
+              <span>
+                <fa-icon [icon]="faSortDown"> </fa-icon>
+                8 c
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alerms-part">
+    <div class="warning-head">
+      <div class="activebtn">
+        <img src="assets/compre.png" width="34rem" /> Compressor Status
+      </div>
+      <div>Compression</div>
+    </div>
+    <div class="alerms" routerLink="/alerts">
+      <div class="head">
+        <div class="title">
+          <div class="alerm-ball"></div>
+          alerms
+        </div>
+        <div class="top">total 100</div>
+        <div class="view">view all -></div>
+      </div>
+      <div class="alerm-wrapper">
+        <div>
+          <span class="alert-title">alert some name-cod</span>
+          <span>Pressure Alarm</span>
+        </div>
+        <div>
+          <span class="date">{{date | date:'short'}}</span>
+        <span> Alert Intensity</span>
+      </div>
+      </div>
+      <div class="alerm-wrapper">
+        <div>
+          <span class="alert-title">alert some name-cod</span>
+          <span>Pressure Alarm</span>
+        </div>
+        <div>
+          <span class="date">{{date | date:'short'}}</span>
+        <span> Alert Intensity</span>
+      </div>
+      </div>
+      <div class="alerm-wrapper">
+        <div>
+          <span class="alert-title">alert some name-cod</span>
+          <span>Pressure Alarm</span>
+        </div>
+        <div>
+          <span class="date">{{date | date:'short'}}</span>
+        <span> Alert Intensity</span>
+      </div>
+      </div>
+      <div class="alerm-wrapper">
+        <div>
+          <span class="alert-title">alert some name-cod</span>
+          <span>Pressure Alarm</span>
+        </div>
+        <div>
+          <span class="date">{{date | date:'short'}}</span>
+        <span> Alert Intensity</span>
+      </div>
+      </div>
+      <div class="alerm-wrapper">
+        <div>
+          <span class="alert-title">alert some name-cod</span>
+          <span>Pressure Alarm</span>
+        </div>
+        <div>
+          <span class="date">{{date | date:'short'}}</span>
+        <span> Alert Intensity</span>
+      </div>
+      </div>
+      <div class="alerm-wrapper">
+        <div>
+          <span class="alert-title">alert some name-cod</span>
+          <span>Pressure Alarm</span>
+        </div>
+        <div>
+          <span class="date">{{date | date:'short'}}</span>
+        <span> Alert Intensity</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

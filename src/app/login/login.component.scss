@@ -1,0 +1,104 @@
+@import "../variables.scss";
+@import "../mixns.scss";
+@import "../defaults.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 72% 1fr;
+}
+
+.intro {
+  background-color: $backgroundC;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 47%;
+    position: absolute;
+    top: 3%;
+    left: -3%;
+  }
+  &-text {
+    color: $fontColor;
+    z-index: 4;
+    width: 40%;
+    text-align: center;
+    font-family: $font;
+    h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    p {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.login-part {
+  height: 100vh;
+  background-color: $mainColor;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.logo-container {
+  @include center;
+}
+
+form {
+  width: 100%;
+  flex-direction: column;
+  @include center;
+  position: relative;
+}
+
+input,
+button {
+  width: 40%;
+  margin-bottom: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: $backgroundC;
+}
+
+input::placeholder {
+  font-size: 0.7rem;
+}
+
+input {
+  padding-left: 1rem;
+  font-size: 0.7rem;
+}
+button {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: small;opacity: 0.6;
+}
+
+.alert{
+  font-size: 0.6rem;
+  color: red;
+  position: absolute;
+  top: 53.5%;
+}
+
+.not-valid{
+border: red 1px solid;
+
+
+}
+
+.can{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.logo-container{
+  display: flex;
+  flex-direction: column;
+  h2{
+color: $wrapperC;
+  }
+}

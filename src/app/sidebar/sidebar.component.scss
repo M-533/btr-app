@@ -1,0 +1,34 @@
+@import "../defaults.scss";
+@import "../mixns.scss";
+@import "../defaults.scss";
+
+.container {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 1.1rem;
+  width: 100%;
+  height: 100%;
+  background-color: $mainColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.container > div {
+  @include center;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  a {
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+}
+
+img:not(.drop > img) {
+  width: 1.9rem;
+}
+

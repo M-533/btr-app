@@ -1,0 +1,53 @@
+<div class="page-container">
+  <app-sidebar></app-sidebar>
+  <div class="main-container">
+    <div class="back-head">
+      <div class="station-name">
+        <img src="assets/gas-station.png" /> Station Name Compressor
+      </div>
+      <div class="back" (click)="goBack()">
+        back <fa-icon [icon]="cloudIc"></fa-icon>
+      </div>
+    </div>
+    <header>
+      <div class="monitored-stations">
+        <small></small>
+        <img src="assets/gas-station.png" />
+        <span>2 / 3</span>
+        <div>Monitored Stations</div>
+      </div>
+      <div class="monitored-stations">
+        <fa-icon [icon]="faMemory"></fa-icon>
+        <span>20s</span>
+        <div>last update</div>
+      </div>
+      <div class="navigate-btn">
+        <div>today</div>
+        <div>yesterday</div>
+        <div class="activebtn">lastWeek</div>
+      </div>
+      <div class="start-date">
+        <span> start date-time</span>
+        <fa-icon [icon]="dateIcon"></fa-icon>
+      </div>
+      <div class="start-date">
+        <span> start date-time</span>
+        <fa-icon [icon]="dateIcon"></fa-icon>
+      </div>
+    </header>
+    <div class="bottom-header">
+      <div       [routerLink]="['finance']" routerLinkActive="opration-active"
+>finance
+      </div>
+      <div
+      [routerLink]="['operation']" routerLinkActive="opration-active"
+      >
+        Operation
+      </div>
+    </div>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,187 @@
+@import "../dashboards/dashboards.component.scss";
+.main-container {
+  display: grid;
+  grid-template-rows: 7% 11% 6% 1fr;
+}
+
+.back-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #F9F5F3;
+}
+
+header {
+  border-bottom: 2px solid #F9F5F3;
+}
+
+.station-name {
+  width: 33%;
+  padding-left: 3.3rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+}
+
+.back {
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  height: 100%;
+  width: 18%;
+  border-bottom-left-radius: 0.6rem;
+  border-top-left-radius: 0.6rem;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: large;
+  color: $wrapperC;
+  cursor: pointer;
+  fa-icon {
+    color: $wrapperC;
+  }
+}
+
+.bottom-header {
+  display: flex;
+  align-items: center;
+
+  div {
+    text-align: center;
+    width: 50%;
+    padding: 0.7rem;
+    font-weight: 500;
+    opacity: 0.55;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: solid transparent 0.3rem;
+  }
+}
+
+.opration-active {
+  border-bottom: solid $mainColor 0.3rem !important;
+  opacity: 1 !important;
+}
+
+.dashboard {
+  grid-template-rows: 23% 0% 1fr !important;
+}
+
+.charts-container {
+  background-color: $wrapperC;
+  grid-row: 3/4;
+  grid-column: span 4;
+}
+.head {
+  fa-icon {
+    font-size: 1rem;
+  }
+}
+
+.bars-container {
+  @include center;
+  flex-direction: column;
+
+  .dispenser {
+    font-weight: 500;
+    margin: 1rem;
+    justify-self: center;
+  }
+  .bars2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90%;
+    width: 80%;
+
+    .bard {
+      display: flex;
+      flex-direction: column;
+      div {
+        width: 0.9rem;
+        height: 6rem;
+        border-radius: 0.5rem;
+      }
+      span {
+        font-size: small;
+      }
+    }
+  }
+
+  .bard:nth-child(2) {
+    div {
+      background: linear-gradient(
+        to top,
+        $mainColor,
+        $mainColor 80%,
+        #3d51612f 80%
+      );
+    }
+  }
+
+  .bard:nth-child(1) {
+    div {
+      background: linear-gradient(
+        to top,
+        $mainColor,
+        $mainColor 40%,
+        #3d51612f 40%
+      );
+    }
+  }
+  .bard:nth-child(3) {
+    div {
+      background: linear-gradient(
+        to top,
+        $mainColor,
+        $mainColor 22%,
+        #3d51612f 22%
+      );
+    }
+  }
+  .bard:nth-child(4) {
+    div {
+      background: linear-gradient(
+        to top,
+        $mainColor,
+        $mainColor 72%,
+        #3d51612f 72%
+      );
+    }
+  }
+  .bard:nth-child(5) {
+    div {
+      background: linear-gradient(
+        to top,
+        $mainColor,
+        $mainColor 91%,
+        #3d51612f 91%
+      );
+    }
+  }
+}
+
+.charts-container {
+  .navigate-btn {
+    height: 1.6rem !important;
+    width: 45% !important;
+    border-radius: 0.2rem;
+
+    fa-icon {
+      font-size: 0.76rem;
+    }
+    div {
+      padding: 0.5rem;
+      border-radius: 0.2rem;
+    }
+  }
+}
+
+.icons-nav {
+  width: 22%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin putSide {
+  display: grid;
+  grid-template-columns: 6% 1fr;
+}
+
+@mixin syrcle( $color , $size  ){
+  background-color: $color;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  }

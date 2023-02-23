@@ -1,0 +1,84 @@
+@import "../defaults.scss";
+@import "../mixns.scss";
+@import "../defaults.scss";
+@import "../station-details/station-details.component.scss";
+@import "../station-details/opration/opration.component.scss";
+
+.page-container {
+  @include putSide;
+}
+
+.alerts-container {
+  height: 100vh;
+}
+
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 4.44rem 3.5rem 1fr;
+}
+
+.med-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  div:nth-child(1) {
+    border-right: 2px solid #f9f5f3;
+  }
+
+  div:nth-child(3) {
+    border-left: 2px solid #f9f5f3;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    width: 33.3%;
+    justify-content: space-evenly;
+    font-weight: 500;
+    font-size: larger;
+
+    fa-icon:last-child {
+      font-size: smaller;
+      // font-weight: 100;
+    }
+  }
+}
+
+.alerms-part {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.alerms-messages-container {
+  width: 98%;
+  overflow-y: scroll;
+  height: 26.46rem;
+}
+
+.first-box {
+  .head {
+    margin-top: 0.4rem;
+  }
+}
+
+.alerms-messages-container::-webkit-scrollbar {
+  background-color: #dadada96;
+  width: 0.3rem;
+  scroll-behavior: smooth;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.alerms-messages-container::-webkit-scrollbar-thumb {
+  background-color: $mainColor;
+}
+
+.view {
+  visibility: hidden;
+}
+
+.navigate-btn {
+  visibility: hidden;
+}

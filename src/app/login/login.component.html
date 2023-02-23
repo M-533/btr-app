@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="intro">
+    <img src="assets/drop.png" />
+    <div class="intro-text">
+      <h1>welcome to btr</h1>
+      <p>
+        Ask the admain to create an account for you to start viewing our
+        Dashboards.
+      </p>
+    </div>
+  </div>
+  <div class="login-part">
+    <div class="logo-container">
+      <img src="assets/dropL.png" width="20%" />
+      <h2>BTR</h2>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <input
+        [ngClass]="{
+          'not-valid':
+            !loginForm.get('email')!.valid && loginForm.get('email')!.touched
+        }"
+        formControlName="email"
+        type="email"
+        placeholder="@  email"
+      />
+      <input
+        [ngClass]="{
+          'not-valid':
+            !loginForm.get('password')!.valid &&
+            loginForm.get('password')!.touched
+        }"
+        formControlName="password"
+        type="password"
+        placeholder="   password"
+      />
+      <span
+        class="alert"
+        *ngIf="
+          !loginForm.get('email')!.valid && loginForm.get('email')!.touched
+        "
+        >please enter a valid email and password</span
+      >
+      <button type="submit" [disabled]="!loginForm.valid" [ngClass]="{can: loginForm.valid}" >login</button>
+    </form>
+  </div>
+</div>

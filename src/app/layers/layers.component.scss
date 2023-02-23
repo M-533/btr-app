@@ -1,0 +1,14 @@
+@import "../defaults.scss";
+@import "../mixns.scss";
+@import "../defaults.scss";
+
+
+.page-container{
+  @include putSide;
+  background-color: $backgroundC;
+
+}
+
+.layers-container{
+  height: 100vh;
+}

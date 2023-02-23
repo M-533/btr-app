@@ -1,0 +1,14 @@
+@import'../station-details.component.scss'
+;
+.dashboard-container{
+  padding: 1.4rem;
+  margin: 0 ;
+  height: 100%;
+}
+
+.hourly-part{
+  display: grid;
+  grid-template-rows: 40% 1fr;
+  row-gap: 2rem;
+}
+

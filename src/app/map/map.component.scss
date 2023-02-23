@@ -1,0 +1,182 @@
+@import "../defaults.scss";
+@import "../mixns.scss";
+@import "../defaults.scss";
+
+.page-container {
+  @include putSide;
+}
+
+header {
+  height: 4.44rem;
+  align-self: center;
+  z-index: 23;
+  background-color: $wrapperC;
+  align-items: center;
+  display: flex;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  justify-content: space-between;
+}
+
+.main-container {
+  height: 100vh;
+display: grid;
+grid-template-rows: 11% 1fr;
+}
+
+.monitored-stations {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 14%;
+  small {
+    @include syrcle($mainColor, 0.44rem);
+    align-self: flex-end;
+  }
+
+  span {
+    font-size: 1.3rem;
+  }
+
+  img {
+    width: 2.3rem;
+  }
+
+  div {
+    width: 3rem;
+    font-size: 0.66rem;
+  }
+}
+
+.navigate-btn {
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18%;
+  height: 40%;
+  border-radius: 2rem;
+  background-color: $backgroundC;
+
+  div {
+    text-transform: uppercase ;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    height: 96%;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    cursor: pointer;
+  }
+}
+.activebtn {
+  background-color: $mainColor;
+  color: $wrapperC;
+  fa-icon{
+    color: $wrapperC !important;
+  }
+}
+
+fa-icon {
+  font-size: 1.8rem;
+}
+
+.lists {
+  background-color: $backgroundC;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.lists-head {
+  display: flex;
+  justify-content: space-between;
+}
+.filter {
+  width: 26%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: 0.9rem;
+  }
+
+  .mhgan {
+    font-size: 0.9rem;
+    fa-icon {
+      font-size: 0.9rem;
+    }
+  }
+
+  .drop {
+    font-size: 0.7rem;
+    width: 7rem;
+    height: 1.5rem;
+    background-color: $wrapperC;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    fa-icon {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.statement {
+  margin-top: 2rem;
+  background-color: $wrapperC;
+  height: 6rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+
+.name {
+  img{
+    width: 2.5rem;
+  }
+  width: 13%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  span {
+    font-size: small;
+  }
+}
+
+small {
+  @include syrcle($mainColor, 0.4rem);
+  align-self: flex-end;
+}
+
+.compression {
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 0.66rem;
+  }
+}
+
+.heat-ball {
+  margin-right: 1rem;
+  @include syrcle(rgb(202, 0, 0), 1rem);
+  border: solid rgba(245, 154, 154, 0.822) 0.3rem;
+}
+
+.heat-bally {
+  margin-right: 1rem;
+  @include syrcle(rgb(239, 178, 23), 1rem);
+  border: solid rgb(238, 230, 146) 0.3rem;
+}
+
+.Map
+{
+height: 100%;
+background-color: blanchedalmond;
+}

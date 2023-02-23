@@ -1,0 +1,288 @@
+@import "../station-details.component.scss";
+@import "../../mixns.scss";
+
+.dashboard-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 70% 1fr;
+}
+
+.title {
+  padding: 1rem;
+  font-size: smaller;
+}
+.icons-nav {
+  width: 11%;
+}
+
+.first-box {
+  .head {
+    margin-top: 2px;
+  }
+}
+
+.dashboard{
+
+  .navigate-btn {
+    height: 1.6rem;
+
+    border-radius: 0.2rem;
+
+    fa-icon {
+      font-size: 0.76rem;
+    }
+    div {
+      padding: 0.5rem;
+      border-radius: 0.2rem;
+    }
+  }
+}
+
+.dashboard {
+  grid-template-columns: 1fr;
+  grid-template-rows: 39% 1fr !important;
+  & > div {
+    background-color: $wrapperC;
+  }
+}
+
+.box-nav {
+  div {
+    cursor: pointer;
+  }
+}
+.syrclers {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.big-details {
+  width: 9rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 7rem;
+  apan {
+    justify-self: center;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+}
+
+.oil-total-continer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 7.4rem;
+}
+
+.ol-wrapper {
+  height: 3rem;
+  overflow: hidden;
+}
+
+.oil-ranege {
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.progress {
+  font-size: x-small;
+  font-weight: 500;
+}
+
+.dispenser-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 11rem;
+  overflow-y: scroll;
+  width: 98%;
+}
+.dispenser-container::-webkit-scrollbar {
+  background-color: #dadada96;
+  width: 0.3rem;
+  scroll-behavior: smooth;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.dispenser-container::-webkit-scrollbar-thumb {
+  background-color: $mainColor;
+}
+.dispensar {
+  margin: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 4rem;
+  width: 30%;
+}
+
+.range-wrapper {
+  span {
+    font-size: x-small;
+  }
+
+  .range {
+    margin: 0%;
+    width: 9rem;
+  }
+}
+
+.d-name {
+  font-size: 1rem !important;
+  font-weight: 500;
+}
+
+.range-temp-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.degree {
+  margin-left: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  align-self: flex-end;
+
+  span {
+    color: #00cbc0;
+    font-size: x-small;
+
+    fa-icon {
+      color: #00cbc0;
+      opacity: 0.7;
+    }
+  }
+
+  sub {
+    margin-right: 1rem;
+    font-size: xx-small;
+  }
+}
+.t.range {
+  background: linear-gradient(to right, #00cbc0, #00cbc0 44%, #e0e7f1 44%);
+}
+
+.p {
+  background: linear-gradient(
+    to right,
+    $fontColor,
+    $fontColor 70%,
+    #e0e7f1 70%
+  );
+}
+
+.second-box {
+  height: 100%;
+}
+
+.warning-head > div {
+  width: 40%;
+  height: 2.4rem;
+  background-color: #f4dbd4;
+  display: flex;
+  font-size: x-small;
+  font-weight: 600;
+  align-items: center;
+}
+.warning-head {
+  justify-self: center !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  div:last-child {
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    text-align: center;
+    @include center;
+    letter-spacing: 1px;
+  }
+
+  .activebtn {
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    background-color: $mainColor;
+    padding: 0.44rem;
+    border-radius: 0.4;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.alerms-part {
+  display: grid;
+  grid-template-rows: 10% 1fr;
+  gap: 1rem;
+}
+
+.alerms {
+  background-color: $wrapperC;
+  width: 100%;
+  border-radius: 0.7rem;
+  .title {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+  }
+
+  .alerm-ball {
+    @include syrcle(#c44536, 0.4rem);
+  }
+}
+
+.top {
+  font-size: x-small;
+  color: gray;
+}
+
+.view {
+  font-size: 0.7rem;
+  color: $mainColor;
+  cursor: pointer;
+
+}
+
+.alerm-wrapper {
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0.5rem;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px #e0e7f1;
+  font-size: 0.7rem;
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.alert-title {
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 0.69rem;
+}
+
+.alerm-wrapper:last-of-type {
+  border: none;
+}

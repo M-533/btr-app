@@ -1,0 +1,362 @@
+<div class="page-container">
+  <app-sidebar></app-sidebar>
+  <div class="main-container">
+    <header>
+      <div class="monitored-stations">
+        <small></small>
+        <img src="assets/gas-station.png" />
+        <span>2 / 3</span>
+        <div>Monitored Stations</div>
+      </div>
+      <div class="monitored-stations">
+        <fa-icon [icon]="faMemory"></fa-icon>
+        <span>20s</span>
+        <div>last update</div>
+      </div>
+      <div class="navigate-btn">
+        <div>today</div>
+        <div>yesterday</div>
+        <div class="activebtn">lastWeek</div>
+      </div>
+      <div class="start-date">
+        <span> start date-time</span>
+        <fa-icon [icon]="dateIcon"></fa-icon>
+      </div>
+      <div class="start-date">
+        <span> start date-time</span>
+        <fa-icon [icon]="dateIcon"></fa-icon>
+      </div>
+    </header>
+    <div class="med-head">
+      <div>
+        <img src="assets/locationB.png" width="29rem" /> all cities
+        <fa-icon [icon]="faAngleDown"></fa-icon>
+      </div>
+      <div>
+        <img src="assets/gas-station.png" width="29rem" /> all cities
+        <fa-icon [icon]="faAngleDown"></fa-icon>
+      </div>
+      <div>
+        <fa-icon [icon]="classes" style="font-size: 1.56rem"></fa-icon> all
+        cities <fa-icon [icon]="faAngleDown"></fa-icon>
+      </div>
+    </div>
+    <div class="alerm-dashboard">
+      <div class="dashboard-container">
+        <div class="dashboard">
+          <div class="first-box">
+            <div class="head">
+              <div class="title">Station details</div>
+              <div class="box-nav">
+                <div>
+                  <span>pressure</span>
+                </div>
+                <div class="active-nav">
+                  <span>kPI </span>
+                </div>
+                <div>
+                  <span>temperture</span>
+                </div>
+              </div>
+
+              <div class="icons-nav">
+                <div class="navigate-btn">
+                  <div class="activebtn"><fa-icon [icon]="tran"></fa-icon></div>
+                  <div><fa-icon [icon]="faSnowflake"></fa-icon></div>
+                </div>
+                <fa-icon [icon]="threedots"></fa-icon>
+              </div>
+            </div>
+            <div>
+              <div class="syrclers" >
+                <div class="big-details">
+                  <circle-progress
+                    [percent]="72"
+                    [radius]="35"
+                    [innerStrokeWidth]="7"
+                    [outerStrokeWidth]="7"
+                    [space]="-6"
+                    [unitsFontSize]="'10'"
+                    [subtitleFontSize]="'7'"
+                    [unitsColor]="'#3D5161'"
+                    [titleColor]="'#3D5161'"
+                    [titleFontSize]="'17'"
+                    [showSubtitle]="false"
+                    [titleColor]="'#3D5161'"
+                    [showInnerStroke]="true"
+                    [animation]="false"
+                    [outerStrokeColor]="'#FF7F5C'"
+                    [innerStrokeColor]="'#ff7f5c4f'"
+                    [animationDuration]="800"
+                  ></circle-progress>
+                  <h4>CT / RT</h4>
+                </div>
+                <div class="big-details">
+                  <h4>40294</h4>
+                  <h4>total working time</h4>
+                </div>
+                <div class="big-details">
+                  <h4>50984</h4>
+                  <h4>total power on time</h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <div class="head">
+              <div class="title">alerms chart</div>
+            </div>
+
+            <app-bar-chart></app-bar-chart>
+
+          </div>
+        </div>
+        <div class="alerms-part">
+          <div class="alerms" routerLink="/alerts">
+            <div class="head">
+              <div class="title">
+                <div class="alerm-ball"></div>
+                alerms
+              </div>
+              <div class="top">total 100</div>
+              <div class="view">view all -></div>
+            </div>
+            <div class="alerms-messages-container" [routerLink]="'/station/finance'">
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+              <div class="alerm-wrapper">
+                <div>
+                  <span class="alert-title">alert some name-cod</span>
+                  <span>Pressure Alarm</span>
+                </div>
+                <div>
+                  <span class="date">{{ date | date : "short" }}</span>
+                  <span> Alert Intensity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

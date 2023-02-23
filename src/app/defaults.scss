@@ -1,0 +1,15 @@
+@import"./variables.scss";
+
+*{
+  text-transform: capitalize;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: $font;
+color:$fontColor ;
+border: none;
+}
+
+input:focus {
+  outline: none;
+}

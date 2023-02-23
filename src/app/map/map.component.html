@@ -1,0 +1,138 @@
+<div class="page-container">
+  <app-sidebar></app-sidebar>
+  <div class="main-container">
+    <header>
+      <div class="monitored-stations">
+        <small></small>
+        <img src="assets/gas-station.png" />
+        <span>2 / 3</span>
+        <div>Monitored Stations</div>
+      </div>
+      <div class="navigate-btn">
+        <div [ngClass]="{ activebtn: showMap }" (click)="showMap = true">
+          viwe map
+        </div>
+        <div [ngClass]="{ activebtn: !showMap }" (click)="showMap = false">
+          viwe lists
+        </div>
+      </div>
+      <div class="monitored-stations">
+        <fa-icon [icon]="faMemory"></fa-icon>
+        <span>20s</span>
+        <div>last update</div>
+      </div>
+    </header>
+    <div *ngIf="!showMap" class="lists">
+      <div class="lists-head">
+        <div class="filter">
+          <div class="mhgan"><fa-icon [icon]="filter"></fa-icon> filter :</div>
+          <div class="drop">
+            classes <fa-icon [icon]="faChevronDown"></fa-icon>
+          </div>
+          <div class="drop">
+            location <fa-icon [icon]="faChevronDown"></fa-icon>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="mhgan"><fa-icon [icon]="Volcano"></fa-icon> sort :</div>
+          <span>warning</span>
+          <span>alerts</span>
+          <span>dispenser</span>
+        </div>
+      </div>
+  <div class="statement">
+    <div class="name">
+      <small></small>
+  <img src="assets/colored-station.png" width="20%">
+<span>station name</span>
+</div>
+
+<div class="compression">
+ <div> <h5>compression</h5>
+  <span>  compressor state</span></div>
+</div>
+
+<div class="compression">
+  <div class="heat-ball"></div>
+ <div> <h5>9320</h5>
+  <span>  alarm count</span></div>
+</div>
+<div class="compression">
+  <div class="heat-bally"></div>
+ <div> <h5>7320</h5>
+  <span>  warning count</span></div>
+</div>
+<div class="compression">
+<img src="assets/group.png" width="20%" style="margin-right: 1rem;">
+<div style="display: flex; flex-direction: column;" >
+  <h4>3/3</h4>
+  <span>active dispenser</span>
+</div>
+</div>
+  </div>
+  <div class="statement">
+    <div class="name">
+      <small></small>
+  <img src="assets/colored-station.png" width="20%">
+<span>station name</span>
+</div>
+
+<div class="compression">
+ <div> <h5>compression</h5>
+  <span>  compressor state</span></div>
+</div>
+
+<div class="compression">
+  <div class="heat-ball"></div>
+ <div> <h5>9320</h5>
+  <span>  alarm count</span></div>
+</div>
+<div class="compression">
+  <div class="heat-bally"></div>
+ <div> <h5>7320</h5>
+  <span>  warning count</span></div>
+</div>
+<div class="compression">
+<img src="assets/group.png" width="20%" style="margin-right: 1rem;">
+<div style="display: flex; flex-direction: column;" >
+  <h4>0/2</h4>
+  <span>active dispenser</span>
+</div>
+</div>
+  </div>
+  <div class="statement">
+    <div class="name">
+      <small></small>
+  <img src="assets/colored-station.png" width="20%">
+<span>station name</span>
+</div>
+
+<div class="compression">
+ <div> <h5>compression</h5>
+  <span>  compressor state</span></div>
+</div>
+
+<div class="compression">
+  <div class="heat-ball"></div>
+ <div> <h5>9320</h5>
+  <span>  alarm count</span></div>
+</div>
+<div class="compression">
+  <div class="heat-bally"></div>
+ <div> <h5>7320</h5>
+  <span>  warning count</span></div>
+</div>
+<div class="compression">
+<img src="assets/group.png" width="20%" style="margin-right: 1rem;">
+<div style="display: flex; flex-direction: column;" >
+  <h4>2/3</h4>
+  <span>active dispenser</span>
+</div>
+</div>
+  </div>
+
+
+    </div>
+    <div *ngIf="showMap"  class="Map">f</div>
+  </div>
+</div>
