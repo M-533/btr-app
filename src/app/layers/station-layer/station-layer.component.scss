@@ -7,7 +7,7 @@
   display: grid;
   height: 100%;
   gap: 2rem;
-  grid-template-rows: 17% 7% 1fr 13%;
+  grid-template-rows: 17% 5% 1fr 10%;
 
   & > div {
     border-radius: 0.5rem;
@@ -19,7 +19,7 @@ header {
   justify-content: space-between;
   .head-item-wrapper {
     cursor: pointer;
-    background-color: #F4DBD4;
+    background-color: #f4dbd4;
     width: 22%;
     height: 80%;
     padding: 1rem;
@@ -49,13 +49,15 @@ header {
 }
 
 .activL {
-  height: 100% !important;
-  align-items: end !important;
-  background-color: $mainColor !important;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-name: activ;
+  align-items: end;
   padding-bottom: 1.5rem !important;
   transition-duration: 3s;
-
-
+  background-color: $mainColor !important ;
+  position: relative;
+  align-items: end !important;
   div {
     span {
       color: $wrapperC !important;
@@ -64,54 +66,201 @@ header {
   }
 }
 
+@keyframes activzzzz {
+  32% {
+    height: 60%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
 .add-btn {
   display: flex;
   justify-content: end;
   align-items: start;
 
-
-  button{
+  button {
     text-transform: uppercase;
     background-color: $mainColor;
     color: $wrapperC;
     height: 2.2rem;
-    width: 8rem;
+    width: 8.8rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-weight: 500;
-font-size: small;
-border-radius: 0.5rem;
+    font-size: small;
+    border-radius: 0.5rem;
+    cursor: pointer;
 
-    span{
+    span {
       color: $wrapperC;
-      font-size: larger;
+      font-size: x-large;
     }
   }
 }
 
-.table-container{
+.table-container {
   background-color: $wrapperC;
-  box-shadow: #0000001A 0px 8px 12px;
-
+  box-shadow: #0000001a 0px 8px 12px;
 }
 
-.head-item-wrapper:nth-child(3)
-{
-
-span{
-  padding-left: 0.77rem;
-}
-}
-.head-item-wrapper:nth-of-type(4){
-  img{
-    width: 2.45rem ;
-
+.head-item-wrapper:nth-child(3) {
+  span {
+    padding-left: 0.77rem;
   }
 }
-.head-item-wrapper:nth-of-type(2){
-  img{
-    width: 1.9rem ;
+.head-item-wrapper:nth-of-type(4) {
+  img {
+    width: 2.45rem;
+  }
+}
+.head-item-wrapper:nth-of-type(2) {
+  img {
+    width: 1.9rem;
+  }
+}
 
+.table {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 22.2rem;
+}
+.trh {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: $wrapperC;
+  width: 96%;
+  display: grid;
+  grid-template-columns: 15% 13% 17% 36% 1fr 1fr;
+  gap: 1.5rem;
+  font-size: x-small;
+padding: 0.68rem;
+  padding-left: 1rem;
+
+  padding-top: 1.4rem;
+  border-bottom: #d3d9e2 1px solid;
+  font-weight: 500;
+  div {
+    text-transform: uppercase;
+
+    span {
+      color: $mainColor;
+
+      fa-icon {
+        color: $mainColor;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+}
+
+.tbody-container::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.3rem;
+  scroll-behavior: smooth;
+}
+.tbody-container::-webkit-scrollbar-thumb {
+  background-color: $mainColor;
+}
+
+.tbody-container{
+  width: 100%;
+  overflow-y: auto;
+}
+
+.trd {
+  padding-left: 0.8rem;
+  font-size: x-small;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 15% 13% 17% 33% 1fr 1fr;
+  gap: 1.5rem;
+  height: 2.8rem;
+  border-bottom: #e0e7f1 1px solid;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.taple-icon-delete {
+  cursor: pointer;
+  width: 1.5rem;
+  @include center;
+  height: 1.5rem;
+  border-radius: 0.3rem;
+  background-color: #ff7f5c33;
+
+  fa-icon {
+    color: $mainColor;
+    font-size: 0.8rem;
+  }
+}
+
+.taple-icon-modify {
+  width: 1.5rem;
+  @include center;
+  height: 1.5rem;
+  border-radius: 0.3rem;
+  background-color: #3d516133;
+
+  fa-icon {
+    // color: $mainColor;
+    font-size: 0.8rem;
+  }
+}
+
+.taple-icon-modify:hover {
+  background-color: $fontColor;
+
+  fa-icon {
+    color: $wrapperC;
+  }
+}
+.taple-icon-delete:hover {
+  background-color: $mainColor;
+
+  fa-icon {
+    color: $wrapperC;
+  }
+}
+small {
+  @include syrcle($mainColor, 0.4rem);
+  margin-right: 0.5rem;
+}
+
+.table-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 5rem;
+}
+
+.tbody {
+  // height: 19rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.deleteRow{
+  animation-name: delete;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes delete {
+
+  to{
+    opacity: 0;
+    transform: translateX(-100%);
   }
 }

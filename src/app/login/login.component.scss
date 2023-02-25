@@ -102,3 +102,13 @@ border: red 1px solid;
 color: $wrapperC;
   }
 }
+
+
+.skip{
+  position: absolute;
+  bottom: 5%;
+  right: 4%;
+  color: $wrapperC;
+  border-bottom: solid 1px;
+  cursor: pointer;
+}

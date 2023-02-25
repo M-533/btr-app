@@ -9,7 +9,7 @@ import {  Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-
+skip=false
 constructor(private router:Router){}
 
   ngOnInit(): void {
@@ -22,4 +22,11 @@ constructor(private router:Router){}
   onSubmit() {
     this.router.navigate(['/map']);
   }
+
+   promise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(this.skip = true);
+    }, 4000);
+  });
+
 }

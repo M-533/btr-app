@@ -21,8 +21,11 @@ import { StationLayerComponent } from './layers/station-layer/station-layer.comp
 import { DispenserComponent } from './layers/dispenser/dispenser.component';
 import { CompressorComponent } from './layers/compressor/compressor.component';
 import { NozzleComponent } from './layers/nozzle/nozzle.component';
+import { SFormComponent } from './layers/station-layer/s-form/s-form.component';
+import { DecePipe } from './layers/station-layer/s-form/dece.pipe';
 @NgModule({
   declarations: [
+
     AppComponent,
     LoginComponent,
     MapComponent,
@@ -39,8 +42,11 @@ import { NozzleComponent } from './layers/nozzle/nozzle.component';
     DispenserComponent,
     CompressorComponent,
     NozzleComponent,
+    SFormComponent,
+    DecePipe,
   ],
   imports: [
+    ReactiveFormsModule,
     NgCircleProgressModule.forRoot({
         "radius": 60,
         "outerStrokeWidth": 10,

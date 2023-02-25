@@ -44,5 +44,6 @@
       >
       <button type="submit" [disabled]="!loginForm.valid" [ngClass]="{can: loginForm.valid}" >login</button>
     </form>
+    <div *ngIf="skip" class="skip" routerLink="/map">skip</div>
   </div>
 </div>

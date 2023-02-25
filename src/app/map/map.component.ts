@@ -13,9 +13,14 @@ export class MapComponent implements OnInit {
   Volcano=faVolcano
 showMap=true
 
+mapBtn = false
+sso(){
+  this.mapBtn = false
+
+}
 
 ngOnInit(){
-  
+
 }
 
 }

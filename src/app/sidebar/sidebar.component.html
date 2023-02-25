@@ -6,12 +6,12 @@
       <img *ngIf="currentRoute!=='/map'"  src=" assets/indicator.png" />
     </a>
     <a [routerLink]="['/dashboard']"  >
-      <img *ngIf="  currentRoute!=='/dashboard'    " src=" assets/dashboard.png" />
-      <img *ngIf="currentRoute=='/dashboard' || currentRoute=='/station/finance' || currentRoute=='/station/operation' " src=" assets/dashboardAc.png"
+      <img *ngIf="!onDashboard  " src=" assets/dashboard.png" />
+      <img *ngIf="onDashboard " src=" assets/dashboardAc.png"
     /></a>
-    <a [routerLink]="['/layers/stations']" >
-      <img *ngIf="currentRoute!=='/layers/stations'" src=" assets/layers.png" />
-      <img *ngIf="currentRoute=='/layers/stations'" src=" assets/layersAc.png"
+    <a [routerLink]="['/layers/betrol']" >
+      <img *ngIf="!onLayers " src=" assets/layers.png" />
+      <img *ngIf="onLayers" src=" assets/layersAc.png"
     /></a>
     <a [routerLink]="['/alerts']" >
       <img *ngIf="currentRoute!=='/alerts'" src=" assets/bell.png" />

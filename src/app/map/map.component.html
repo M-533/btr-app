@@ -8,11 +8,13 @@
         <span>2 / 3</span>
         <div>Monitored Stations</div>
       </div>
-      <div class="navigate-btn">
-        <div [ngClass]="{ activebtn: showMap }" (click)="showMap = true">
+      <div class="navigate-btn " (click)="mapBtn=true">
+        <span  class="jj" *ngIf="mapBtn && showMap"  ></span>
+        <span class="kk" *ngIf="!showMap" ></span>
+        <div [ngStyle]="{backgroundColor: !mapBtn ? '#FF7F5C':''}"  [ngClass]="{ activebtns: showMap }" (click)="showMap = true">
           viwe map
         </div>
-        <div [ngClass]="{ activebtn: !showMap }" (click)="showMap = false">
+        <div [ngClass]="{ activebtns: !showMap }" (click)="showMap = false">
           viwe lists
         </div>
       </div>
