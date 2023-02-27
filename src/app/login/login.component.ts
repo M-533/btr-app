@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +9,8 @@ import {  Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-skip=false
-constructor(private router:Router){}
+  skip = false;
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -20,13 +20,12 @@ constructor(private router:Router){}
   }
 
   onSubmit() {
-    this.router.navigate(['/map']);
+    this.router.navigate(['/dashboard']);
   }
 
-   promise = new Promise((resolve) => {
+  promise = new Promise((resolve) => {
     setTimeout(() => {
-      resolve(this.skip = true);
+      resolve((this.skip = true));
     }, 4000);
   });
-
 }

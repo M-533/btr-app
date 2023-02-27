@@ -19,10 +19,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { BarChartComponent } from './alerts/bar-chart/bar-chart.component';
 import { StationLayerComponent } from './layers/station-layer/station-layer.component';
 import { DispenserComponent } from './layers/dispenser/dispenser.component';
-import { CompressorComponent } from './layers/compressor/compressor.component';
-import { NozzleComponent } from './layers/nozzle/nozzle.component';
 import { SFormComponent } from './layers/station-layer/s-form/s-form.component';
 import { DecePipe } from './layers/station-layer/s-form/dece.pipe';
+import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import { DfFormComponent } from './layers/dispenser/df-form/df-form.component';
 @NgModule({
   declarations: [
 
@@ -40,12 +40,11 @@ import { DecePipe } from './layers/station-layer/s-form/dece.pipe';
     BarChartComponent,
     StationLayerComponent,
     DispenserComponent,
-    CompressorComponent,
-    NozzleComponent,
     SFormComponent,
     DecePipe,
+    DfFormComponent,
   ],
-  imports: [
+  imports: [LeafletModule,
     ReactiveFormsModule,
     NgCircleProgressModule.forRoot({
         "radius": 60,

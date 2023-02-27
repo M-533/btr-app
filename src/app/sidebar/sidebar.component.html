@@ -1,10 +1,7 @@
 <div class="container">
   <div class="drop"><img src="assets/dropL.png" width="54rem" /></div>
   <div class="nav-items">
-    <a [routerLink]="['/map']"  >
-      <img *ngIf="currentRoute=='/map'"  src=" assets/indicatorAc.png" />
-      <img *ngIf="currentRoute!=='/map'"  src=" assets/indicator.png" />
-    </a>
+
     <a [routerLink]="['/dashboard']"  >
       <img *ngIf="!onDashboard  " src=" assets/dashboard.png" />
       <img *ngIf="onDashboard " src=" assets/dashboardAc.png"
@@ -17,8 +14,12 @@
       <img *ngIf="currentRoute!=='/alerts'" src=" assets/bell.png" />
        <img *ngIf="currentRoute=='/alerts'" src=" assets/bellAc.png"/>
       </a>
-
+      <a [routerLink]="['/map']"  >
+        <img *ngIf="currentRoute=='/map'"  src=" assets/indicatorAc.png" />
+        <img *ngIf="currentRoute!=='/map'"  src=" assets/indicator.png" />
+      </a>
     <a style="cursor:default;" > <img src=" assets/setting.png" /></a>
   </div>
+
   <div  [routerLink]="['/login']" class="logout"><img src=" assets/logout.png" ></div>
 </div>

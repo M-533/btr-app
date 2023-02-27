@@ -1,1 +1,37 @@
-@import'../station-layer/station-layer.component.scss'
+@import'../station-layer/station-layer.component.scss';
+
+
+.filter{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
+
+  div{
+    width: 6rem;
+    height: 1.5rem;
+    @include center;
+    justify-content: space-evenly;
+    background-color: $wrapperC;
+    font-size: x-small;
+    border-radius: 0.3rem;
+font-weight: 500;
+    fa-icon{
+      font-size: 0.9rem;
+  }
+  }
+}
+
+.deleteRow{
+  animation-name: delete;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes delete {
+
+  to{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}

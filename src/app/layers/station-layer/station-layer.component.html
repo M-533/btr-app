@@ -10,12 +10,12 @@
         <img src="assets/group.png" /> <span>dispenser </span>
       </div>
     </div>
-    <div class="head-item-wrapper" [routerLink]="['../compressor']">
+    <div class="head-item-wrapper">
       <div class="head-item">
         <img src="assets/b-compre.png" /> <span>compressor </span>
       </div>
     </div>
-    <div class="head-item-wrapper" [routerLink]="['../nozzle']">
+    <div class="head-item-wrapper">
       <div class="head-item">
         <img src="assets/b-nozzle.png" /> <span>stations </span>
       </div>
@@ -37,28 +37,34 @@
         <div></div>
         <div></div>
       </div>
-     <div class="tbody-container">
-      <div class="tbody">
-        <div class="trd" [ngClass]="{deleteRow: station.deleteR }" *ngFor="let station of stationDataF ; let i = index">
-          <div class="h">{{station.name | dece:20}}</div>
-          <div >{{station.id | dece:10}}</div>
-          <div> {{station.location | dece:27}} </div>
-          <div>{{station.description |dece:44 }}</div>
+      <div class="tbody-container">
+        <div class="tbody">
+          <div
+            class="trd"
+            [ngClass]="{ deleteRow: station.deleteR }"
+            *ngFor="let station of stationDataF; let i = index"
+          >
+            <div class="h">{{ station.name | dece : 20 }}</div>
+            <div>{{ station.id | dece : 10 }}</div>
+            <div>{{ station.location | dece : 27 }}</div>
+            <div>{{ station.description | dece : 44 }}</div>
 
-          <div class="table-icons" >
-            <div class="taple-icon-modify"><fa-icon [icon]="pen"></fa-icon></div>
-            <div class="taple-icon-delete"    ><fa-icon [icon]="delete"></fa-icon></div>
+            <div class="table-icons">
+              <div class="taple-icon-modify">
+                <fa-icon [icon]="pen"></fa-icon>
+              </div>
+              <div class="taple-icon-delete" (click)="deleteR(i)">
+                <fa-icon [icon]="delete"></fa-icon>
+              </div>
+            </div>
           </div>
-
+        </div>
       </div>
-
-      </div>
-     </div>
     </div>
   </div>
 
   <div class="add-btn">
-    <button [routerLink]="['sForm']" routerLinkActive="router-link-active" ><span>+</span> add new</button>
+    <button [routerLink]="['sForm']"><span>+</span> add new</button>
   </div>
 </div>
 <router-outlet></router-outlet>

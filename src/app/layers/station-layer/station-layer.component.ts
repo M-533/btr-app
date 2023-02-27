@@ -6,17 +6,35 @@ import { DataService } from '../data.service';
   templateUrl: './station-layer.component.html',
   styleUrls: ['./station-layer.component.scss']
 })
-export class StationLayerComponent   {
+export class StationLayerComponent  implements OnInit {
 location =faLocationDot
 delete=faTrashCan
 pen=faPenToSquare
-delei=false
 @ViewChild( 'row' ,{static:false})row:ElementRef
 
 constructor( private dataServce:DataService){}
 stationDataF=this.dataServce.stationFormData
 
+ngOnInit(){
+
+}
+
+deleteR(index:number){
+  this.stationDataF[index].deleteR=true
+  let promise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve( this.stationDataF.splice(index, 1));
+    }, 500);
+
+  });
+
+
+
+
+
+
 
 
 }
 
+}

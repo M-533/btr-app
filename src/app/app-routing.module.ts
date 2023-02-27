@@ -10,9 +10,9 @@ import { FinanceComponent } from './station-details/finance/finance.component';
 import { OprationComponent } from './station-details/opration/opration.component';
 import { StationLayerComponent } from './layers/station-layer/station-layer.component';
 import { DispenserComponent } from './layers/dispenser/dispenser.component';
-import { CompressorComponent } from './layers/compressor/compressor.component';
-import { NozzleComponent } from './layers/nozzle/nozzle.component';
 import { SFormComponent } from './layers/station-layer/s-form/s-form.component';
+import { DfFormComponent } from './layers/dispenser/df-form/df-form.component';
+import { Path } from 'leaflet';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -26,13 +26,12 @@ const routes: Routes = [
     {path:'betrol' ,component:StationLayerComponent ,children:[
       {path:'sForm' , component:SFormComponent}
     ]},
-    {path:'dispenser' ,component:DispenserComponent},
-    {path:'compressor' ,component:CompressorComponent},
-    {path:'nozzle' ,component:NozzleComponent},
-  ] },
-  { path: 'alerts', component: AlertsComponent },
+    {path:'dispenser' ,component:DispenserComponent ,children:[
+      {path:'dForm' , component:DfFormComponent}
+    ]},
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  ] },
+  { path: 'alerts', component: AlertsComponent},  { path: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({

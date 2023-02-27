@@ -20,8 +20,8 @@ header {
 
 .main-container {
   height: 100vh;
-display: grid;
-grid-template-rows: 11% 1fr;
+  display: grid;
+  grid-template-rows: 11% 1fr;
 }
 
 .monitored-stations {
@@ -61,7 +61,7 @@ grid-template-rows: 11% 1fr;
 
   div {
     z-index: 6;
-    text-transform: uppercase ;
+    text-transform: uppercase;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -75,18 +75,18 @@ grid-template-rows: 11% 1fr;
 .activebtn {
   background-color: $mainColor;
   color: $wrapperC;
-  fa-icon{
+  fa-icon {
     color: $wrapperC !important;
   }
 }
 
 .activebtns {
   color: $wrapperC;
-  fa-icon{
+  fa-icon {
     color: $wrapperC !important;
   }
 }
-.jj{
+.jj {
   height: 100%;
   width: 50%;
   position: absolute;
@@ -97,16 +97,15 @@ grid-template-rows: 11% 1fr;
   background-color: $mainColor;
   z-index: 2;
   animation-fill-mode: forwards;
+}
+
+@keyframes ss {
+  to {
+    left: 0%;
   }
+}
 
-  @keyframes ss {
-
-    to{
-      left: 0%;
-    }
-  }
-
-.kk{
+.kk {
   height: 96%;
   width: 50%;
   position: absolute;
@@ -119,10 +118,8 @@ grid-template-rows: 11% 1fr;
   animation-fill-mode: forwards;
 }
 
-
-@keyframes kk{
-
-  to{
+@keyframes kk {
+  to {
     left: 50%;
   }
 }
@@ -181,12 +178,10 @@ fa-icon {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-
 }
 
 .name {
-  img{
+  img {
     width: 2.5rem;
   }
   width: 13%;
@@ -223,9 +218,40 @@ small {
   border: solid rgb(238, 230, 146) 0.3rem;
 }
 
-.Map
-{
-height: 100%;
-background-color: blanchedalmond;
+.Map {
+  height: 100%;
+  z-index: -11;
+
+  #map {
+    height: 98%;
+  }
 }
 
+.location {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background-color: $mainColor;
+  z-index: 33;
+  @include center;
+  width: 2rem;
+  height: 2rem;
+  border-top-left-radius: 0.39rem;
+  border-bottom-left-radius: 0.39rem;
+
+  img {
+    width: 1.3rem;
+  }
+}
+
+
+
+.point {
+  cursor: pointer;
+  @include syrcle($mainColor, 1rem);
+  position: absolute;
+  top: 33%;
+  left: 35%;
+  z-index: 2222222;
+  box-shadow: 0px 0px 2px 0.5rem rgb(229, 107, 93);
+}

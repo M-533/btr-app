@@ -1,29 +1,73 @@
 <div class="layer-container">
   <header>
-    <div class="head-item-wrapper "[routerLink]="['../betrol']"  >
+    <div class="head-item-wrapper" [routerLink]="['../betrol']">
       <div class="head-item">
         <img src="assets/gas-station.png" /> <span>stations </span>
       </div>
     </div>
-    <div class="head-item-wrapper activL " [routerLink]="['../dispenser']"  >
+    <div class="head-item-wrapper activL">
       <div class="head-item">
-        <img src="assets/w-roup.png"   /> <span>dispenser </span>
+        <img src="assets/w-roup.png" /> <span>dispenser </span>
       </div>
     </div>
-    <div class="head-item-wrapper  "  [routerLink]="['../compressor']">
+    <div class="head-item-wrapper">
       <div class="head-item">
         <img src="assets/b-compre.png" /> <span>compressor </span>
       </div>
     </div>
-    <div class="head-item-wrapper"  [routerLink]="['../nozzle']">
+    <div class="head-item-wrapper">
       <div class="head-item">
-        <img src="assets/b-nozzle.png"  /> <span>stations </span>
+        <img src="assets/b-nozzle.png" /> <span>stations </span>
       </div>
     </div>
   </header>
-  <div class="filter">
-    <div></div>
+
+    <div class="filter" >
+      <div>filter : <fa-icon [icon]="faLaptopCode"></fa-icon></div>
+    </div>
+
+  <div class="table-container">
+    <div class="table-container">
+      <div class="table">
+        <div class="trh">
+          <div>dispenser</div>
+          <div>class </div>
+          <div>
+            location 
+          </div>
+          <div>description</div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="tbody-container">
+          <div class="tbody">
+            <div
+              class="trd"
+              [ngClass]="{ deleteRow: station.deleteR }"
+              *ngFor="let station of dispenserData; let i = index"
+            >
+              <div class="h">{{ station.name | dece : 20 }}</div>
+              <div>{{ station.id | dece : 10 }}</div>
+              <div>{{ station.location | dece : 27 }}</div>
+              <div>{{ station.description | dece : 44 }}</div>
+
+              <div class="table-icons">
+                <div class="taple-icon-modify">
+                  <fa-icon [icon]="pen"></fa-icon>
+                </div>
+                <div class="taple-icon-delete" (click)="deleteR(i)">
+                  <fa-icon [icon]="deledetR"></fa-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="table-container"></div>
-  <div class="add-btn"><button> <span>+</span> add new</button></div>
+  <div class="add-btn" [routerLink]="['dForm']">
+    <button><span>+</span> add new</button>
+  </div>
 </div>
+
+<router-outlet></router-outlet>
