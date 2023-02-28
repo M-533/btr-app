@@ -22,16 +22,3 @@ font-weight: 500;
   }
 }
 
-.deleteRow{
-  animation-name: delete;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes delete {
-
-  to{
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-}

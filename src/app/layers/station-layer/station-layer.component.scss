@@ -142,7 +142,7 @@ header {
   grid-template-columns: 15% 13% 17% 36% 1fr 1fr;
   gap: 1.5rem;
   font-size: x-small;
-padding: 0.68rem;
+  padding: 0.68rem;
   padding-left: 1rem;
 
   padding-top: 1.4rem;
@@ -171,7 +171,7 @@ padding: 0.68rem;
   background-color: $mainColor;
 }
 
-.tbody-container{
+.tbody-container {
   width: 100%;
   overflow-y: auto;
 }
@@ -219,7 +219,6 @@ padding: 0.68rem;
   }
 }
 
-
 .taple-icon-delete:hover {
   background-color: $mainColor;
 
@@ -243,18 +242,16 @@ small {
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 
-.deleteRow{
+.deleteRow {
   animation-name: delete;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
 @keyframes delete {
-
-  to{
+  to {
     opacity: 0;
     transform: translateX(-100%);
   }

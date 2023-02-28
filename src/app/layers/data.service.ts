@@ -9,12 +9,12 @@ export class DataService {
 
 stationFormData=[
 
-  new stationData('any name' , 20533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ' ,false),
-  new stationData('some name' , 30533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
-  new stationData('some name' , 40533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
-  new stationData('some name' , 50533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
-  new stationData('some name' , 60533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
-  new stationData('some name' , 70533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ' ,false),
+  new stationData('some name' , 2000533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe cliceblabla  ' ,false),
+  new stationData('some name' , 3000533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
+  new stationData('some name' , 4000533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
+  new stationData('some name' , 5000533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
+  new stationData('some name' , 6000533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ',false ),
+  new stationData('some name' , 7000533 , 'Iraq, babylon ,40 street ' ,'some text description and bla pipe clice bla bla  ' ,false),
 ]
 
 dispenserData=[

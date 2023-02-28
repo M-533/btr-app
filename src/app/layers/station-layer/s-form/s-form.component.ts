@@ -2,7 +2,7 @@ import { Component ,OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../../data.service';
-import { DispenserData, stationData } from '../station-model';
+import { stationData } from '../station-model';
 
 @Component({
   selector: 'app-s-form',
@@ -10,14 +10,13 @@ import { DispenserData, stationData } from '../station-model';
   styleUrls: ['./s-form.component.scss']
 })
 export class SFormComponent implements OnInit {
-
 sForm:FormGroup
 move=false
 constructor(private router :Router , private dataService:DataService){}
 
  addNew() {
-  this.dataService.dispenserData.push(
-    new DispenserData(this.sForm.value.name ,this.sForm.value.id,this.sForm.value.location,this.sForm.value.description, false)
+  this.dataService.stationFormData.push(
+    new stationData(this.sForm.value.name ,this.sForm.value.id,this.sForm.value.location,this.sForm.value.description, false)
     )
 
     this.move=true

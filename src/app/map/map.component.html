@@ -158,10 +158,10 @@
     <div *ngIf="showMap" class="Map">
       <div id="map" leaflet [leafletOptions]="mapOptions"></div>
 
-      <div class="point"></div>
+    </div>
+    <div *ngIf="showMap">
       <div class="location">
         <img src="assets/location.png" />
       </div>
-    </div>
   </div>
 </div>

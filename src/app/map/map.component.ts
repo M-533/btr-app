@@ -23,13 +23,9 @@ mapBtn = false
 
 sso(){
   this.mapBtn = false
-
-
 }
 
-
 mapOptions: MapOptions;
-
 constructor() {
 }
 
@@ -50,9 +46,9 @@ private initializeMapOptions() {
         {
           maxZoom: 18,
         })
-    ],
-  };
-}
+      ],
+    };
+  }
 
 
 }
