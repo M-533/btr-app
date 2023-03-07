@@ -2,13 +2,14 @@
   <div class="drop"><img src="assets/dropL.png" width="54rem" /></div>
   <div class="nav-items">
 
-    <a [routerLink]="['/dashboard']"  >
-      <img *ngIf="!onDashboard  " src=" assets/dashboard.png" />
-      <img *ngIf="onDashboard " src=" assets/dashboardAc.png"
-    /></a>
     <a [routerLink]="['/layers/betrol']" >
       <img *ngIf="!onLayers " src=" assets/layers.png" />
       <img *ngIf="onLayers" src=" assets/layersAc.png"
+    /></a>
+
+    <a [routerLink]="['/dashboard']"  >
+      <img *ngIf="!onDashboard  " src=" assets/dashboard.png" />
+      <img *ngIf="onDashboard " src=" assets/dashboardAc.png"
     /></a>
     <a [routerLink]="['/alerts']" >
       <img *ngIf="currentRoute!=='/alerts'" src=" assets/bell.png" />

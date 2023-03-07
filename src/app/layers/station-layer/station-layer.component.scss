@@ -52,12 +52,12 @@ header {
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
   animation-name: activ;
-  align-items: end;
+  align-items: flex-end;
   padding-bottom: 1.5rem !important;
   transition-duration: 3s;
   background-color: $mainColor !important ;
   position: relative;
-  align-items: end !important;
+  align-items:flex-end!important;
   div {
     span {
       color: $wrapperC !important;
@@ -79,7 +79,7 @@ header {
 .add-btn {
   display: flex;
   justify-content: end;
-  align-items: start;
+  align-items:flex-start;
 
   button {
     text-transform: uppercase;
@@ -139,8 +139,8 @@ header {
   background-color: $wrapperC;
   width: 96%;
   display: grid;
-  grid-template-columns: 15% 13% 17% 36% 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 2% 11% 9% 17% 37% 1fr 1fr;
+  gap: 1.8rem;
   font-size: x-small;
   padding: 0.68rem;
   padding-left: 1rem;
@@ -178,17 +178,18 @@ header {
 
 .trd {
   padding-left: 0.8rem;
-  font-size: x-small;
+  font-size: 0.7rem;
   width: 95%;
   display: grid;
-  grid-template-columns: 15% 13% 17% 33% 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 2% 11% 9% 17% 35% 1fr 1fr;
+  gap: 1.8rem;
   height: 2.8rem;
   border-bottom: #e0e7f1 1px solid;
 
   div {
     display: flex;
     align-items: center;
+    overflow:hidden ;
   }
 }
 
@@ -214,7 +215,6 @@ header {
   background-color: #3d516133;
 
   fa-icon {
-    // color: $mainColor;
     font-size: 0.8rem;
   }
 }
@@ -226,6 +226,15 @@ header {
     color: $wrapperC;
   }
 }
+
+.taple-icon-modify:hover {
+  cursor: pointer;
+  background-color: $fontColor;
+  fa-icon {
+    color: $wrapperC;
+  }
+}
+
 small {
   @include syrcle($mainColor, 0.4rem);
   margin-right: 0.5rem;
@@ -255,4 +264,36 @@ small {
     opacity: 0;
     transform: translateX(-100%);
   }
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  button {
+    height: 130%;
+    width: 130%;
+    border-radius: 0.3rem;
+    font-size: small;
+    background-color: $fontColor;
+    color: $wrapperC;
+    cursor: pointer;
+  }
+
+  div {
+    width: 6rem;
+    height: 1.5rem;
+    @include center;
+    justify-content: space-evenly;
+    background-color: $wrapperC;
+    font-size: x-small;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    fa-icon {
+      font-size: 0.9rem;
+    }
+  }
+}
+.ap {
+  box-shadow: 0px 2px 4px $mainColor;
 }

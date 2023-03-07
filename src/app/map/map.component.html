@@ -155,13 +155,12 @@
         </div>
       </div>
     </div>
-    <div *ngIf="showMap" class="Map">
-      <div id="map" leaflet [leafletOptions]="mapOptions"></div>
-
-    </div>
-    <div *ngIf="showMap">
-      <div class="location">
-        <img src="assets/location.png" />
+    <div class="Map">
+      <div class="map-container">
+        <div class="map-frame">
+          <div id="map"></div>
+        </div>
       </div>
+     
   </div>
 </div>

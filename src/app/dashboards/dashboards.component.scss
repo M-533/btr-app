@@ -89,7 +89,7 @@
 .sales-btns {
   grid-column: 4/5;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
   fa-icon {
     color: $mainColor;

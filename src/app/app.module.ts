@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -20,12 +19,15 @@ import { BarChartComponent } from './alerts/bar-chart/bar-chart.component';
 import { StationLayerComponent } from './layers/station-layer/station-layer.component';
 import { DispenserComponent } from './layers/dispenser/dispenser.component';
 import { SFormComponent } from './layers/station-layer/s-form/s-form.component';
-import { DecePipe } from './layers/station-layer/s-form/dece.pipe';
-import {LeafletModule} from '@asymmetrik/ngx-leaflet';
-import { DfFormComponent } from './layers/dispenser/df-form/df-form.component';
+import { DecePipe } from './dece.pipe';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { DfFormComponent } from './layers/dispenser/d-form/df-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UpdateDataComponent } from './layers/station-layer/update-data/update-data.component';
+import { UpdateDispenserComponent } from './layers/dispenser/update-dispenser/update-dispenser.component';
+
 @NgModule({
   declarations: [
-
     AppComponent,
     LoginComponent,
     MapComponent,
@@ -43,17 +45,20 @@ import { DfFormComponent } from './layers/dispenser/df-form/df-form.component';
     SFormComponent,
     DecePipe,
     DfFormComponent,
+    UpdateDataComponent,
+    UpdateDispenserComponent,
   ],
-  imports: [LeafletModule,
+  imports: [
+    HttpClientModule,
+    LeafletModule,
     ReactiveFormsModule,
     NgCircleProgressModule.forRoot({
-        "radius": 60,
-        "outerStrokeWidth": 10,
-        "innerStrokeWidth": 5,
-        "showBackground": false,
-        "startFromZero": false
-      })
-    ,
+      radius: 60,
+      outerStrokeWidth: 10,
+      innerStrokeWidth: 5,
+      showBackground: false,
+      startFromZero: false,
+    }),
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,

@@ -34,7 +34,6 @@ onLayers:boolean
 
   ngOnInit() {
     this.checkMrout(this.currentRoute);
-    console.log(this.onDashboard);
     this.checkLrout(this.currentRoute);
   }
 }

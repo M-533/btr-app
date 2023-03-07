@@ -1,5 +1,24 @@
-@import "node_modules/font-awesome/scss/font-awesome";
 @import "~leaflet/dist/leaflet.css";
 body{
   margin: 0%;
+}
+;
+.popup{
+//  background-color: red;
+//  z-index: 33333333333;
+ div{
+  // background-color: #FF7F5C;
+  color: #FF7F5C;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  div{
+    text-align: center;
+    font-size: 1rem;
+  }
+  div:last-child{
+    font-size: 0.5rem;
+  }
+ }
 }

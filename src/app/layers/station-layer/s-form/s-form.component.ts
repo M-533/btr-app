@@ -1,47 +1,49 @@
-import { Component ,OnInit } from '@angular/core';
+import { Output, EventEmitter, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DataService } from '../../data.service';
-import { stationData } from '../station-model';
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'app-s-form',
   templateUrl: './s-form.component.html',
-  styleUrls: ['./s-form.component.scss']
+  styleUrls: ['./s-form.component.scss'],
 })
 export class SFormComponent implements OnInit {
-sForm:FormGroup
-move=false
-constructor(private router :Router , private dataService:DataService){}
+  sForm: FormGroup;
+  move = false;
 
- addNew() {
-  this.dataService.stationFormData.push(
-    new stationData(this.sForm.value.name ,this.sForm.value.id,this.sForm.value.location,this.sForm.value.description, false)
-    )
 
-    this.move=true
-
-    this.close()
+  constructor(private router: Router, private dataService: DataService) {}
+dd=false
+  ngOnInit() {
+    this.sForm = new FormGroup({
+      name: new FormControl('', Validators.required),
+      code: new FormControl('', Validators.required),
+      location: new FormControl('', Validators.required),
+      description: new FormControl('', Validators.required),
+    });
   }
 
-close(){
-  this.move=true
-  let promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(this.router.navigate(['layers/betrol']));
-    }, 305);
-  });
+  onAddStation() {
+    this.dataService.addStation(this.sForm.value).subscribe(
+      (res)=>{
+console.log(res);
 
-  ;
-}
+      }
+    );
 
-
-ngOnInit(): void {
-  this.sForm = new FormGroup({
- name : new FormControl("" , Validators.required),
- id : new FormControl("" , Validators.required),
- location : new FormControl("" , Validators.required),
- description : new FormControl("" , Validators.required)
-    })
+    this.close();
+    this.dataService.OrderShow()
   }
+
+  close() {
+    this.move = true;
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.router.navigate(['layers/betrol']));
+      }, 305);
+    });
+  }
+
+
 }

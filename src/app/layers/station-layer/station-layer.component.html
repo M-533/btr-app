@@ -21,17 +21,20 @@
       </div>
     </div>
   </header>
-  <div class="filter">
-    <div></div>
+  <div class="filter" >
+    <div class="ap" *ngIf="!showFetchBtn">API crud</div>
+    <div *ngIf="showFetchBtn"> <button (click)="fetchData()"> fetch Data</button></div>
   </div>
 
   <div class="table-container">
     <div class="table">
       <div class="trh">
+        <div>#</div>
         <div>station <span>name</span></div>
-        <div>channle <span>ID</span></div>
+        <div>sIQ <span>code</span></div>
         <div>
-          location <span><fa-icon [icon]="location"></fa-icon></span>
+          location
+           <span><fa-icon [icon]="location"></fa-icon></span>
         </div>
         <div>description</div>
         <div></div>
@@ -40,23 +43,26 @@
       <div class="tbody-container">
         <div class="tbody">
           <div
-            class="trd"
+            class="trd  "
             [ngClass]="{ deleteRow: station.deleteR }"
             *ngFor="let station of stationDataF; let i = index"
           >
+          <div>{{i+1}}</div>
             <div class="h">{{ station.name | dece : 20 }}</div>
-            <div>{{ station.id | dece : 10 }}</div>
+            <div>{{ station.code | dece : 10 }}</div>
             <div>{{ station.location | dece : 27 }}</div>
             <div>{{ station.description | dece : 44 }}</div>
 
             <div class="table-icons">
-              <div class="taple-icon-modify">
+              <div class="taple-icon-modify" routerLink="updateS/{{station.id}}" >
                 <fa-icon [icon]="pen"></fa-icon>
               </div>
-              <div class="taple-icon-delete" (click)="deleteR(i)">
+              <div class="taple-icon-delete">
+              <div class="taple-icon-delete" (click)="deleteR(i)" >
                 <fa-icon [icon]="delete"></fa-icon>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -64,7 +70,7 @@
   </div>
 
   <div class="add-btn">
-    <button [routerLink]="['sForm']"><span>+</span> add new</button>
+    <button  [routerLink]="['sForm']"><span>+</span> add new</button>
   </div>
 </div>
-<router-outlet></router-outlet>
+<router-outlet ></router-outlet>

@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/layers/betrol']);
   }
 
   promise = new Promise((resolve) => {

@@ -1,18 +1,14 @@
 <div class="background" [ngClass]="{ gone: move == true }">
   <div class="form-box" [ngClass]="{ 'gone-box': move == true }">
     <div class="head">
-      <div><img src="assets/gas-station.png" /> add new station</div>
+      <div><img src="assets/gas-station.png" /> update & edit the date</div>
       <div (click)="close()">x</div>
     </div>
-    <form [formGroup]="sForm" (ngSubmit)="onAddStation()">
-      <div class="inputs" >
+    <form [formGroup]="theUpdateF" (ngSubmit)="onUpdate()">
+      <div class="inputs">
         <div>
           <label>station name</label>
-          <input 
-            formControlName="name"
-            placeholder="placeholder..."
-            type="text"
-          />
+          <input formControlName="name" type="text" />
         </div>
 
         <div>
@@ -29,16 +25,15 @@
         </div>
       </div>
       <div class="form-btns">
-        <p [ngStyle]="{visibility: !sForm.valid&&sForm.touched  ? 'visible' : 'hidden' }"
+        <p
+        [ngStyle]="{
+          visibility: !theUpdateF.valid ? 'visible' : 'hidden'
+        }"
         >make sure all inputs fields are not empty</p>
         <div>
-
           <button (click)="close()" type="reset">cancel</button>
-          <button type="submit">
-            <img src="assets/saveBtn.png" width="15rem" /> save
-          </button>
+          <button (click)="close()" type="submit">update</button>
         </div>
-
       </div>
     </form>
   </div>

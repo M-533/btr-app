@@ -75,12 +75,11 @@ form {
   height: 85%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 78% 1fr;
+  grid-template-rows: 80% 1fr;
 }
 
 .inputs {
   width: 80%;
-  // height: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -99,10 +98,10 @@ form {
 }
 
 input {
-  height: 1.7rem;
+  height: 1.8rem;
   padding-left: 1rem;
   border-radius: 0.3rem;
-  font-size: x-small;
+  font-size: 0.74rem;
   box-shadow: 0px 0pc 3px;
 }
 
@@ -115,7 +114,7 @@ input {
   margin: auto;
   width: 80%;
   margin-bottom: 1.38rem;
-  justify-content: end;
+  justify-content: space-between;
 
   div{
     width: 32%;
@@ -125,7 +124,7 @@ input {
   button{
     width: 5rem;
     height: 1.7rem;
-    font-size: x-small;
+    font-size: 0.8rem;
       border-radius: 0.3rem;
 
   }
@@ -173,3 +172,12 @@ to{
   opacity: 0;
 }
 }
+
+
+p{
+  color: $mainColor;
+font-size: x-small;
+align-self: center;
+}
+
+

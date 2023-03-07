@@ -1,24 +1,29 @@
 @import'../station-layer/station-layer.component.scss';
 
-
-.filter{
-  display: flex;
-  justify-content: end;
-  align-items: end;
-
-
-  div{
-    width: 6rem;
-    height: 1.5rem;
-    @include center;
-    justify-content: space-evenly;
-    background-color: $wrapperC;
-    font-size: x-small;
-    border-radius: 0.3rem;
-font-weight: 500;
-    fa-icon{
-      font-size: 0.9rem;
-  }
-  }
+.trd {
+  grid-template-columns: 2% 1fr 1fr 1.5fr 1.5fr 10%   ;
+text-align: center ;
+width: 96%;
+padding-left: 0.3rem;
+padding-right: 0.3rem;
+div{
+  justify-self: center;
+  align-self: center;
 }
 
+}
+.trh {
+  width: 96%;
+  grid-template-columns: 2% 1fr 1fr 1.5fr 1.5fr 10%   ;
+text-align: center ;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+
+}
+
+.table-icon{
+  margin: 0;
+  padding: 0;
+  justify-self:flex-end!important;
+  text-align: end;
+}

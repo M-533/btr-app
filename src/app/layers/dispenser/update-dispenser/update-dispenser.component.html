@@ -1,0 +1,40 @@
+<div class="background" [ngClass]="{ gone: move == true }">
+  <div class="form-box" [ngClass]="{ 'gone-box': move == true }">
+    <div class="head">
+      <div><img src="assets/gas-station.png" /> update & edit the date</div>
+      <div (click)="close()">x</div>
+    </div>
+    <form [formGroup]="theUpdateF" (ngSubmit)="onUpdate()">
+      <div class="inputs">
+        <div>
+          <label>dispenser name</label>
+          <input formControlName="dispenser" type="text" />
+        </div>
+
+        <div>
+          <label>dispenser class</label>
+          <input formControlName="class" type="text" />
+        </div>
+        <div class="long">
+          <label>location</label>
+          <input formControlName="location" class="long" type="text" />
+        </div>
+        <div class="long">
+          <label>phone number</label>
+          <input formControlName="phone" class="long" type="text" />
+        </div>
+      </div>
+      <div class="form-btns">
+        <p
+        [ngStyle]="{
+          visibility: !theUpdateF.valid ? 'visible' : 'hidden'
+        }"
+        >make sure all inputs fields are not empty</p>
+        <div>
+          <button (click)="close()" type="reset">cancel</button>
+          <button (click)="close()" type="submit">update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

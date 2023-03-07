@@ -1,0 +1,46 @@
+<div class="background" [ngClass]="{ gone: move == true }">
+  <div class="form-box" [ngClass]="{ 'gone-box': move == true }">
+    <div class="head">
+      <div><img src="assets/gas-station.png" /> add new dispenser</div>
+      <div (click)="close()">x</div>
+    </div>
+    <form [formGroup]="DForm" (ngSubmit)="addNew()">
+      <div class="inputs">
+        <div class="long">
+          <label>dispenser name</label>
+          <input
+            formControlName="dispenser"
+            placeholder="placeholder..."
+            type="text"
+          />
+        </div>
+        <div>
+          <label>phone number</label>
+          <input formControlName="phone" class="long" type="text" />
+        </div>
+        <div>
+          <label> dispenser class</label>
+          <input formControlName="class" type="text" />
+        </div>
+        <div class="long">
+          <label>dispenser location</label>
+          <input formControlName="location" class="long" type="text" />
+        </div>
+      </div>
+      <div class="form-btns">
+        <p
+        [ngStyle]="{
+          visibility: !DForm.valid && DForm.touched ? 'visible' : 'hidden'
+        }"
+        >make sure all inputs fields are not empty</p>
+
+          <div>
+          <button (click)="close()" type="reset">cancel</button>
+          <button type="submit">
+            <img src="assets/saveBtn.png" width="15rem" /> save
+          </button>
+        </div>
+      </div>
+    </form>
+  </div> 
+</div>

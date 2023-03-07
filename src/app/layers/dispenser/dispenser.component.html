@@ -22,36 +22,39 @@
     </div>
   </header>
 
-    <div class="filter" >
-      <div>filter : <fa-icon [icon]="faLaptopCode"></fa-icon></div>
-    </div>
+  <div class="filter" >
+    <div class="ap" *ngIf="!showFetchBtn">API crud</div>
+    <div *ngIf="showFetchBtn"> <button (click)="fetchData()"> fetch Data</button></div>
+  </div>
+
 
     <div class="table-container">
       <div class="table">
         <div class="trh">
+          <div>#</div>
           <div>dispenser</div>
           <div>class </div>
           <div>
             location
           </div>
-          <div>description</div>
-          <div></div>
+          <div>phone number</div>
           <div></div>
         </div>
         <div class="tbody-container">
           <div class="tbody">
             <div
+            *ngFor="let dispenser of dispenserData; let i = index"
+            [ngClass]="{ deleteRow: dispenser.deleteR }"
               class="trd"
-              [ngClass]="{ deleteRow: station.deleteR }"
-              *ngFor="let station of dispenserData; let i = index"
-            >
-              <div class="h">{{ station.name | dece : 20 }}</div>
-              <div>{{ station.id | dece : 10 }}</div>
-              <div>{{ station.location | dece : 27 }}</div>
-              <div>{{ station.description | dece : 44 }}</div>
+              >
+              <div class="h">{{ i + 1}}</div>
+              <div class="h">{{ dispenser.dispenser| dece : 20 }}</div>
+              <div>{{ dispenser.class | dece : 10 }}</div>
+              <div>{{ dispenser.location | dece : 27 }}</div>
+              <div>{{ dispenser.phone |dece:9 }}</div>
 
               <div class="table-icons">
-                <div class="taple-icon-modify">
+                <div class="taple-icon-modify" routerLink="updateD/{{dispenser.id}}" >
                   <fa-icon [icon]="pen"></fa-icon>
                 </div>
                 <div class="taple-icon-delete" (click)="deleteR(i)">

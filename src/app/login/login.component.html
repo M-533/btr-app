@@ -23,7 +23,7 @@
         }"
         formControlName="email"
         type="email"
-        placeholder="@  email"
+        placeholder="email"
       />
       <input
         [ngClass]="{
@@ -44,6 +44,6 @@
       >
       <button type="submit" [disabled]="!loginForm.valid" [ngClass]="{can: loginForm.valid}" >login</button>
     </form>
-    <div *ngIf="skip" class="skip" routerLink="/dashboard">skip</div>
+    <div *ngIf="skip" class="skip" routerLink="/layers/betrol">skip</div>
   </div>
 </div>
